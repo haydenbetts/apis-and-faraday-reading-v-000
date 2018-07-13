@@ -11,8 +11,8 @@ class SearchesController < ApplicationController
       req.params['query'] = 'coffee shop'
     end
 
-    body_hash = JSON.parse(@resp.body)
-    @venues = body_hash["response"]["venues"]
+    body = JSON.parse(@resp.body)
+    @venues = body["response"]["venues"]
     render 'search'
   end
 end
