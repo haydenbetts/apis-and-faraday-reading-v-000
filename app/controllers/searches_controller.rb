@@ -12,10 +12,12 @@ class SearchesController < ApplicationController
     end
 
     body = JSON.parse(@resp.body)
+    
     if @resp.success?
       @venues = body["response"]["venues"]
     else
       @error = body["meta"]["errorDetail"]
+    end
     render 'search'
   end
 end
