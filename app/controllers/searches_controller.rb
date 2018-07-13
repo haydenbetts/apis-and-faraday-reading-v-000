@@ -12,7 +12,7 @@ class SearchesController < ApplicationController
     end
 
     body_hash = JSON.parse(@resp.body)
-    @venus = body_hash["response"]["venus"]
+    @venues = body_hash["response"]["venues"]
     render 'search'
   end
 end
