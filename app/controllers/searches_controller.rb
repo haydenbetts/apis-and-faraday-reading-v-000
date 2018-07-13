@@ -1,3 +1,4 @@
+require 'pry'
 class SearchesController < ApplicationController
   def search
   end
@@ -12,6 +13,7 @@ class SearchesController < ApplicationController
     end
 
     body = JSON.parse(@resp.body)
+    binding.pry
     @venues = body["response"]["venues"]
     render 'search'
   end
