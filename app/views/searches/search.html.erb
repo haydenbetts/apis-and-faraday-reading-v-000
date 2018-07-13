@@ -7,7 +7,7 @@
 <div>
   <% if @error %>
     <p> <%= @error %> </p>
-  <% if @venues %>
+  <% elsif @venues %>
     <ul>
       <% @venues.each do |venue| %>
         <li>
