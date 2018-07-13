@@ -5,6 +5,8 @@
   <%= submit_tag "Search!" %>
 <% end %>
 <div>
+  <% if @error %>
+    <p> <%= @error %> </p>
   <% if @venues %>
     <ul>
       <% @venues.each do |venue| %>
